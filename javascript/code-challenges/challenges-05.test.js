@@ -62,7 +62,6 @@ const countNumberOfElements = (arr) => {
   return arr.reduce(
     (a, i) => {
       return a+1;
-      //cant use a++, why?
     },0
   );
 };
@@ -141,11 +140,13 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  return str.reduce(
+  let arr = str.split('');
+  let ans = arr.reduce(
     (a,i) => {
-      return ;
-    },''
-  );
+      return i + a;
+    },'');
+
+ return ans;
 };
 
 /* ------------------------------------------------------------------------------------------------
