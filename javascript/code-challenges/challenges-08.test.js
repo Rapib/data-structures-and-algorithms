@@ -62,8 +62,6 @@ const sortByChildren = (charArray) => {
       return a.children.length - b.children.length;
     }}
   );
-
-  console.log(sortB);
   return sortB;
 
 };
@@ -76,7 +74,8 @@ Write a function named containsW that takes in a string. This function should us
 ------------------------------------------------------------------------------------------------ */
 
 const containsW = (str) => {
-  // Solution code here...
+  let regex = /w/g;
+  return regex.test(str);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,7 +91,8 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  // Solution code here...
+  let regex = /[0-9]/g;
+  return regex.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -103,7 +103,8 @@ Write a function named containsWorld that takes in a string or number of any len
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
-  // Solution code here...
+  let regex = /world/g;
+  return regex.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -115,7 +116,9 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  let regex = /[A-Z]\w{0,1000}/g;
+  let word = str.match(regex);
+  return word || [];
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -125,7 +128,10 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  let regex = /[A-J]/g;
+  
+  let word = str.match(regex);
+  return word;
 };
 
 /* ------------------------------------------------------------------------------------------------
