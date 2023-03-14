@@ -71,11 +71,15 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
-  let sort = input.map(i => {
-     return i.filter( no => typeof no === 'number' && no % 5 === 0
-    ).map(no => Math.pow(2, no))});
-  console.log(sort);
-  return sort;
+  // let sort = input.map(i => {
+  //    return i.filter( no => typeof no === 'number' && no % 5 === 0
+  //   ).map(no => Math.pow(2, no))});
+  // console.log(sort);
+  // return sort;
+  return input.map(array => {
+    return array.filter(no => typeof no === 'number' && no %5 === 0)
+    .map(no => Math.pow(2,no));
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -154,11 +158,9 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-  let arr = data.reduce((a,i) => {
-    +i.height
-  },0);
-
-  // console.log(arr);
+  return data.reduce((shortestAsOfNow, currentCharacter)=> {
+    return Number(shortestAsOfNow.height) < Number(currentCharacter.height) ? shortestAsOfNow :currentCharacter;}).name
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
