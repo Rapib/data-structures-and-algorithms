@@ -1,6 +1,6 @@
 'use strict';
 
-const {validateBrackets} = require('../challenges');
+const {validateBrackets} = require('../challenges/challenges');
 
 test('validate Brackets -false', () => {
 
