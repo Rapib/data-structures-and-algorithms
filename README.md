@@ -20,6 +20,8 @@ This repository contains a collection of common data structures and algorithms i
     - [Recursion](#recursion)
     - [Dynamic Programming](#dynamic-programming)
 
+3. [Code Challenges](#code-challenges)
+
 ## Data Structures
 
 ### Linked List
@@ -38,7 +40,7 @@ This repository contains a collection of common data structures and algorithms i
 ### Stack
 
 - **Description**: A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle. Elements are added and removed from the same end called the "top" of the stack.
-- **Implementation**: [Stack.js](data-structures/stack.js)
+- **Implementation**: [Stack.js](stack-and-queue.js)
 - **Example**:
 
   ```javascript
@@ -51,7 +53,7 @@ This repository contains a collection of common data structures and algorithms i
 ### Queue
 
 - **Description**: A queue is a linear data structure that follows the First-In-First-Out (FIFO) principle. Elements are added at the rear and removed from the front.
-- **Implementation**: [Queue.js](data-structures/queue.js)
+- **Implementation**: [Queue.js](stack-and-queue.js)
 - **Example**:
 
   ```javascript
@@ -162,3 +164,6 @@ This repository contains a collection of common data structures and algorithms i
   console.log(fibonacci(6)); // 8
   ```
 
+## Code Challenges
+
+[Challenges.js](challenges.js)
