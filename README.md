@@ -95,7 +95,7 @@ This repository contains a collection of common data structures and algorithms i
 
  A hash table (hash map) is a data structure that uses hash functions to map keys to values, allowing constant-time average case lookups, insertions, and deletions.
 
-- **Implementation**: [HashTable.js](data-structures/hash-table.js)
+- **Implementation**: [HashTable.js](hash-table.js)
 - **Example**:
 
   ```javascript
@@ -166,4 +166,4 @@ This repository contains a collection of common data structures and algorithms i
 
 ## Code Challenges
 
-[Challenges.js](challenges.js)
+[Challenges.js](challenges)
