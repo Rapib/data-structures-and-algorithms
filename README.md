@@ -6,7 +6,6 @@ This repository contains a collection of common data structures and algorithms i
 ## Table of Contents
 
 1. [Data Structures](#data-structures)
-    - [Array](#array)
     - [Linked List](#linked-list)
     - [Stack](#stack)
     - [Queue](#queue)
@@ -23,22 +22,10 @@ This repository contains a collection of common data structures and algorithms i
 
 ## Data Structures
 
-### Array
-
-- **Description**: An array is a collection of elements stored at contiguous memory locations. It allows random access to elements based on their indices.
-- **Implementation**: [Array.js](data-structures/array.js)
-- **Example**:
-  ```javascript
-  const array = new Array();
-  array.push(1);
-  array.push(2);
-  console.log(array); // [1, 2]
-  ```
-
 ### Linked List
 
 - **Description**: A linked list is a linear data structure consisting of nodes, where each node contains a value and a reference to the next node in the sequence.
-- **Implementation**: [LinkedList.js](data-structures/linked-list.js)
+- **Implementation**: [LinkedList.js](linked-list.js)
 - **Example**:
 
   ```javascript
