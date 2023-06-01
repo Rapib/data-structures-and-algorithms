@@ -66,7 +66,7 @@ This repository contains a collection of common data structures and algorithms i
 ### Binary Tree
 
 - **Description**: A binary tree is a tree-like structure with a maximum of two children for each parent node.
-- **Implementation**: [BinaryTree.js](data-structures/binary-tree.js)
+- **Implementation**: [BinaryTree.js](trees.js)
 - **Example**:
 
   ```javascript
@@ -107,7 +107,7 @@ This repository contains a collection of common data structures and algorithms i
 ### Graph
 
 - **Description**: A graph is a non-linear data structure consisting of nodes (vertices) connected by edges. It represents relationships between different objects.
-- **Implementation**: [Graph.js](data-structures/graph.js)
+- **Implementation**: [Graph.js](graph.js)
 - **Example**:
 
   ```javascript
