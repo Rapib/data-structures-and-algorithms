@@ -10,7 +10,7 @@ This repository contains a collection of common data structures and algorithms i
     - [Stack](#stack)
     - [Queue](#queue)
     - [Binary Tree](#binary-tree)
-    - [Heap](#heap)
+    <!-- - [Heap](#heap) -->
     - [Hash Table](#hash-table)
     - [Graph](#graph)
 
@@ -76,7 +76,7 @@ This repository contains a collection of common data structures and algorithms i
   console.log(tree.contains(3)); // true
   ```
 
-### Heap
+<!-- ### Heap
 
 - **Description**: A heap is a specialized tree-based data structure that satisfies the heap property, where each parent node is less/greater than or equal to its child nodes.
 - **Implementation**: [Heap.js](data-structures/heap.js)
@@ -87,7 +87,7 @@ This repository contains a collection of common data structures and algorithms i
   heap.insert(4);
   heap.insert(2);
   console.log(heap.peek()); // 2
-  ```
+  ``` -->
 
 ### Hash Table
 
