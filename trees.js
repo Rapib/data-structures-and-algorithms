@@ -67,6 +67,7 @@ class BinaryTree {
   // Each depth first traversal method should return an array of values, ordered appropriately.
   preOrder() {
     //Root > left > right
+    // you wiill know the first element is the root, easier to recreate the tree
     let arr = [];
     traverse = (root) => {
       arr.push(root.value);
@@ -77,12 +78,14 @@ class BinaryTree {
         traverse(root.right);
       }
     };
-    traverse (this.root);
+    traverse(this.root);
     return arr;
   }
 
   inOrder() {
     // left >> root >> right
+    // the output will be sorted if it is a binary search tree
+    //eg [2,3,4,5,6]
     let arr = [];
     traverse = (root) => {
       if (root.left) {
@@ -93,7 +96,7 @@ class BinaryTree {
         traverse(root.right);
       }
     };
-    traverse (this.root);
+    traverse(this.root);
     return arr;
   }
 
@@ -109,7 +112,7 @@ class BinaryTree {
       }
       arr.push(root.value);
     };
-    traverse (this.root);
+    traverse(this.root);
     return arr;
   }
 }
@@ -145,39 +148,39 @@ class BinarySearchTree extends BinaryTree {
   contains(value) {
     // Returns: boolean indicating whether or not the value is in the tree at least once.
     checkNode = (currentNode, val) => {
-      if (currentNode.value === val){
+      if (currentNode.value === val) {
         return true;
-      } else if (currentNode.left === null && currentNode.right === null){
+      } else if (currentNode.left === null && currentNode.right === null) {
         return false;
-      } else if (currentNode.value > val){
+      } else if (currentNode.value > val) {
         return checkNode(currentNode.left, val);
-      } else if (currentNode.value <= val){
+      } else if (currentNode.value <= val) {
         return checkNode(currentNode.right, val);
       }
     }
-    if (this.root === null){
+    if (this.root === null) {
       return false;
     } else {
       return checkNode(this.root, value);
     }
   }
 
-  getMax(){
+  getMax() {
     // return the max number
     let max = null;
     loop = (node) => {
-      if (node.value > max){
+      if (node.value > max) {
         max = node.value;
       }
-      if (node.left !== null){
+      if (node.left !== null) {
         loop(node.left);
       }
-      if (node.right !== null){
+      if (node.right !== null) {
         loop(node.right);
       }
 
     }
-    if (this.root === null){
+    if (this.root === null) {
       return 'nothing in the tree';
     } else {
       loop(this.root);
@@ -186,25 +189,20 @@ class BinarySearchTree extends BinaryTree {
   }
 }
 
-// function breadthFirst (root){
-//   let queue = new Queue();
-//   let arr = [];
-//   if (root !== null) {
-//     queue.enqueue(root);
-//     while (!queue.isEmpty()) {
-//       let current = queue.dequeue();
-//       arr.push(current.value);
-//       if (current.left !== null) {
-//         queue.enqueue(current.left);
-//       }
-//       if (current.right !== null) {
-//         queue.enqueue(current.right);
-//       }
-//     }
-//   }
-//   console.log(arr);
-//   return arr;
-// }
+
+
+function breadthFirst(root) {
+  let queue = [];
+  let arr = [];
+  let current = root;
+  queue.push(root);
+  while (queue.length > 0) {
+    arr.push(queue.shift());
+    if (current.left) queue.push(current.left);
+    if (current.right) queue.push(current.right);   
+  }
+  return arr;
+}
 
 
 // class kNode {
